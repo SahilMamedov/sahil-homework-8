@@ -9,13 +9,13 @@ namespace task_7
     class Student:Person
     {
 
-        private int _point;
+        protected int _point;
+
 
         public Student()
         {
 
         }
-      
 
         public Student(string name,int age,int point):base(name,age)
         {

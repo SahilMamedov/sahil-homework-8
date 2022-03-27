@@ -8,21 +8,11 @@ namespace task_7
 {
     class Person
     {
-        private string _name;
-        private string _surName;
-        private int _age;
+        protected string _name;
+        protected string _surName;
+        
+        public int _age { get; set; }
 
-        public int age
-        {
-            get
-            {
-                return _age;
-            }
-            set
-            {
-                _age = value;
-            }
-        }
 
         public string name
         {
@@ -78,18 +68,18 @@ namespace task_7
                 }
             }
         }
-        public Person()
-        {
-
-        }
+       
         public Person(string name, int age)
         {
             _name = name;
             _age = age;
         }
-       
 
 
+        public Person()
+        {
+
+        }
 
 
 
