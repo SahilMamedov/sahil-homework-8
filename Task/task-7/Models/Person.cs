@@ -13,8 +13,15 @@ namespace task_7
         
         public int _age { get; set; }
 
+        public Person(string name,string surname, int age)
+        {
+            Name = name;
+            Surname = surname;
+            _age = age;
 
-        public string name
+            Console.WriteLine($"Age: {age}");
+        }
+        public string Name
         {
             get
             {
@@ -28,6 +35,7 @@ namespace task_7
                     if (value.Length >= 3 && value.Length <= 30)
                     {
                         _name = value;
+                        Console.WriteLine($"Name: {_name}");
                     }
                     else
                     {
@@ -42,7 +50,7 @@ namespace task_7
             }
 
         }
-        public string surname
+        public string Surname
         {
             get
             {
@@ -56,30 +64,26 @@ namespace task_7
                     if (value.Length >= 3 && value.Length <= 35)
                     {
                         _surName = value;
+                        Console.WriteLine($"SurName: {_surName} ");
                     }
                     else
                     {
-                        Console.WriteLine("Name must be minumum 3 and maxsimum 35 characters");
+                        Console.WriteLine("Surname must be minumum 3 and maxsimum 35 characters");
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Name must start with Uppercase");
+                    
+                    Console.WriteLine("Surname must start with Uppercase");
                 }
             }
         }
+
        
-        public Person(string name, int age)
-        {
-            _name = name;
-            _age = age;
-        }
+       
 
 
-        public Person()
-        {
 
-        }
 
 
 

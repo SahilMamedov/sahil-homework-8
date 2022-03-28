@@ -12,20 +12,17 @@ namespace task_7
         protected int _point;
 
 
-        public Student()
-        {
-
-        }
-
-        public Student(string name,int age,int point):base(name,age)
-        {
-            _point = point;
-            
-        }
-
         
 
-        public int point 
+        public Student(string name, string surname, int age, int point) : base(name,surname, age)
+        {
+            Point = point;
+
+        }
+
+
+
+        public int Point 
         {
             get
             {
@@ -36,6 +33,7 @@ namespace task_7
                 if(value >=0 && value <= 100)
                 {
                     _point = value;
+                    Console.WriteLine($"Point: {_point}");
                 }
                 else
                 {
